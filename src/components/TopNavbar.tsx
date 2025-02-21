@@ -10,7 +10,7 @@ function TopNavbar() {
           <Navbar.Brand>
             <a className="navbar-brand" href="/">
               <img
-                src={import.meta.env.BASE_URL + dads_logo}
+                src={dads_logo}
                 className="d-inlinel-block align-top"
                 alt="DAD'S Logo"
                 width={200}
@@ -24,7 +24,7 @@ function TopNavbar() {
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="ms-auto">
-              <Nav.Link href="/">Home</Nav.Link>
+              <Nav.Link href={import.meta.env.BASE_URL}>Home</Nav.Link>
               <Nav.Link href="/about">About</Nav.Link>
               <Nav.Link href="/service">Service</Nav.Link>
               <Nav.Link href="/contact">Contact</Nav.Link>
