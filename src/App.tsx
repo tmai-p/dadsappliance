@@ -9,7 +9,7 @@ import Footer from "./components/Footer";
 
 function App() {
   return (
-    <Router basename={import.meta.env.PUBLIC_URL}>
+    <Router basename="/dadsappliance/">
       <TopNavbar />
       <Routes>
         <Route path="/" element={<Homepage />} />
