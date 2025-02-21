@@ -9,10 +9,7 @@ function Homepage() {
         </p>
         <p>6636 Virginia Manor Road, Beltsville, MD 20705</p>
         <div>
-          <img
-            src={import.meta.env.BASE_URL + "../images/wolf_1.jpg"}
-            alt="Wolf Kitchen"
-          />
+          <img src={"../images/wolf_1.jpg"} alt="Wolf Kitchen" />
         </div>
         <p>&nbsp;</p>
       </center>
