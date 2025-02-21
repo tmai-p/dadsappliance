@@ -12,10 +12,10 @@ function App() {
     <Router basename={import.meta.env.BASE_URL}>
       <TopNavbar />
       <Routes>
-        <Route path="/dadsappliance" element={<Homepage />} />
-        <Route path="/dadsappliance/about" element={<About />} />
-        <Route path="/dadsappliance/service" element={<Service />} />
-        <Route path="/dadsappliance/contact" element={<Contact />} />
+        <Route path="/" element={<Homepage />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/service" element={<Service />} />
+        <Route path="/contact" element={<Contact />} />
       </Routes>
       <Footer />
     </Router>
