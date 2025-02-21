@@ -1,6 +1,6 @@
 import { Nav, Navbar, Container, NavDropdown } from "react-bootstrap";
 import dads_logo from "../images/dads_logo.jpg";
-import about from "../pages/About";
+//import about from "../pages/About";
 
 function TopNavbar() {
   const isHidden = true;
@@ -26,7 +26,9 @@ function TopNavbar() {
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="ms-auto">
               <Nav.Link href={import.meta.env.BASE_URL}>Home</Nav.Link>
-              <Nav.Link href={import.meta.env.BASE_URL + about}>About</Nav.Link>
+              <Nav.Link href={import.meta.env.BASE_URL + "about"}>
+                About
+              </Nav.Link>
               <Nav.Link href={import.meta.env.BASE_URL + "service"}>
                 Service
               </Nav.Link>

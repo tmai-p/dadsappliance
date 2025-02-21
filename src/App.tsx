@@ -1,5 +1,5 @@
 import "./App.css";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { HashRouter as Router, Route, Routes } from "react-router-dom";
 import Homepage from "./pages/Homepage";
 import About from "./pages/About";
 import Service from "./pages/Service";
@@ -9,7 +9,7 @@ import Footer from "./components/Footer";
 
 function App() {
   return (
-    <Router basename={import.meta.env.BASE_URL}>
+    <Router>
       <TopNavbar />
       <Routes>
         <Route path="/" element={<Homepage />} />
