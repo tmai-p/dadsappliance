@@ -10,12 +10,7 @@ function Footer() {
             <img src={front_door} alt="Front-door" width={120} height={90} />
           </div>
           <div className="float-child-2">
-            <img
-              src={import.meta.env.BASE_URL + dads_logo}
-              alt="DAD'S Logo"
-              width={80}
-              height={25}
-            />
+            <img src={dads_logo} alt="DAD'S Logo" width={80} height={25} />
             <p>
               Monday-Friday: 9am - 4pm <br />
               📞 301-937-0222
