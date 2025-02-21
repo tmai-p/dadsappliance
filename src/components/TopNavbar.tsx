@@ -25,9 +25,15 @@ function TopNavbar() {
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="ms-auto">
               <Nav.Link href={import.meta.env.BASE_URL}>Home</Nav.Link>
-              <Nav.Link href="/about">About</Nav.Link>
-              <Nav.Link href="/service">Service</Nav.Link>
-              <Nav.Link href="/contact">Contact</Nav.Link>
+              <Nav.Link href={import.meta.env.BASE_URL + "/about"}>
+                About
+              </Nav.Link>
+              <Nav.Link href={import.meta.env.BASE_URL + "/service"}>
+                Service
+              </Nav.Link>
+              <Nav.Link href={import.meta.env.BASE_URL + "/contact"}>
+                Contact
+              </Nav.Link>
               <NavDropdown title="Specials" id="basic-nav-dropdown">
                 <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
                 <NavDropdown.Item href="#action/3.2">
