@@ -1,4 +1,5 @@
 import { Nav, Navbar, Container, NavDropdown } from "react-bootstrap";
+import dads_logo from "../images/dads_logo.jpg";
 
 function TopNavbar() {
   const isHidden = true;
@@ -9,7 +10,7 @@ function TopNavbar() {
           <Navbar.Brand>
             <a className="navbar-brand" href="/">
               <img
-                src="/src/images/dads_logo.jpg"
+                src={import.meta.env.BASE_URL + dads_logo}
                 className="d-inlinel-block align-top"
                 alt="DAD'S Logo"
                 width={200}

@@ -1,3 +1,6 @@
+import front_door from "../images/front_door.jpg";
+import dads_logo from "../images/dads_logo.jpg";
+
 function Footer() {
   return (
     <div className="bground">
@@ -5,7 +8,7 @@ function Footer() {
         <div className="float-container">
           <div className="float-child-1">
             <img
-              src="/src/images/front_door.jpg"
+              src={import.meta.env.BASE_URL + front_door}
               alt="Front-door"
               width={120}
               height={90}
@@ -13,7 +16,7 @@ function Footer() {
           </div>
           <div className="float-child-2">
             <img
-              src="/src/images/dads_logo.jpg"
+              src={import.meta.env.BASE_URL + dads_logo}
               alt="DAD'S Logo"
               width={80}
               height={25}
