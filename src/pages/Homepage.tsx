@@ -1,4 +1,4 @@
-//import wolf_img from "../images/wolf_1.jpg";
+import wolf_img from "../images/wolf_1.jpg";
 
 function Homepage() {
   return (
@@ -9,7 +9,7 @@ function Homepage() {
         </p>
         <p>6636 Virginia Manor Road, Beltsville, MD 20705</p>
         <div>
-          <img src={"../images/wolf_1.jpg"} alt="Wolf Kitchen" />
+          <img src={wolf_img} alt="Wolf Kitchen" />
         </div>
         <p>&nbsp;</p>
       </center>

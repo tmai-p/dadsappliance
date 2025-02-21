@@ -7,12 +7,7 @@ function Footer() {
       <center>
         <div className="float-container">
           <div className="float-child-1">
-            <img
-              src={import.meta.env.BASE_URL + front_door}
-              alt="Front-door"
-              width={120}
-              height={90}
-            />
+            <img src={front_door} alt="Front-door" width={120} height={90} />
           </div>
           <div className="float-child-2">
             <img
