@@ -1,7 +1,6 @@
 import { Nav, Navbar, Container, NavDropdown } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import dads_logo from "../images/dads_logo.jpg";
-//import about from "../pages/About";
 
 function TopNavbar() {
   const isHidden = true;
@@ -30,10 +29,10 @@ function TopNavbar() {
               <Nav.Link as={Link} to={"about"}>
                 About
               </Nav.Link>
-              <Nav.Link href={import.meta.env.BASE_URL + "service"}>
+              <Nav.Link as={Link} to={"service"}>
                 Service
               </Nav.Link>
-              <Nav.Link href={import.meta.env.BASE_URL + "contact"}>
+              <Nav.Link as={Link} to={"contact"}>
                 Contact
               </Nav.Link>
               <NavDropdown title="Specials" id="basic-nav-dropdown">
