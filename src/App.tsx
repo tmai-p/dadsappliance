@@ -13,9 +13,9 @@ function App() {
       <TopNavbar />
       <Routes>
         <Route path="/" element={<Homepage />} />
-        <Route path="#/about" element={<About />} />
-        <Route path="#/service" element={<Service />} />
-        <Route path="#/contact" element={<Contact />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/service" element={<Service />} />
+        <Route path="/contact" element={<Contact />} />
       </Routes>
       <Footer />
     </>
