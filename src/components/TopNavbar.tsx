@@ -26,9 +26,7 @@ function TopNavbar() {
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="ms-auto">
               <Nav.Link href={import.meta.env.BASE_URL}>Home</Nav.Link>
-              <Nav.Link href={import.meta.env.BASE_URL + "about"}>
-                About
-              </Nav.Link>
+              <Nav.Link href={"#/about"}>About</Nav.Link>
               <Nav.Link href={import.meta.env.BASE_URL + "service"}>
                 Service
               </Nav.Link>
