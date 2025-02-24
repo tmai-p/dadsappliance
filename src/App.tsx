@@ -7,6 +7,8 @@ import Contact from "./pages/Contact";
 import Confirm from "./Confirm";
 import TopNavbar from "./components/TopNavbar";
 import Footer from "./components/Footer";
+import Ranges from "./pages/Ranges";
+import Fridges from "./pages/Fridges";
 
 function App() {
   return (
@@ -18,6 +20,8 @@ function App() {
         <Route path="/service" element={<Service />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/confirm" element={<Confirm />} />
+        <Route path="/ranges" element={<Ranges />} />
+        <Route path="/fridges" element={<Fridges />} />
       </Routes>
       <Footer />
     </Router>
