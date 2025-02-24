@@ -1,5 +1,5 @@
 import front_door from "../images/front_door.jpg";
-import dads_logo from "../images/dads_logo.jpg";
+import dads_logo from "../images/dads_logo_sm.jpg";
 
 function Footer() {
   return (
