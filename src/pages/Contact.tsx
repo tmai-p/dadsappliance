@@ -2,8 +2,11 @@ import { useState } from "react";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import emailjs from "@emailjs/browser";
+import { useNavigate } from "react-router-dom";
 
 function Contact() {
+  const navigate = useNavigate();
+
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -28,6 +31,7 @@ function Contact() {
           console.log("Email sent successfully!", result.text);
           // Reset form
           setFormData({ name: "", email: "", phone: "", message: "" });
+          navigate("/confirm");
         },
         (error) => {
           console.error("Email sending failed:", error.text);
