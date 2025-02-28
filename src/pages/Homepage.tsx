@@ -1,4 +1,5 @@
-import wolf_img from "../images/wolf_1.jpg";
+import wolf_img from "../images/wolf_2.jpg";
+import Brands from "./Brands";
 
 function Homepage() {
   return (
@@ -12,6 +13,14 @@ function Homepage() {
           <img src={wolf_img} alt="Wolf Kitchen" />
         </div>
         <p>&nbsp;</p>
+        <div>
+          <span>
+            <h4>BRANDS WE SERVE</h4>
+          </span>
+        </div>
+        <div>
+          <Brands />
+        </div>
       </center>
     </div>
   );
