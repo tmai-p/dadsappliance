@@ -53,7 +53,7 @@ const Brands = () => {
             padding: "10px",
           }}
         >
-          <Link to={item.url}>
+          <Link to={item.url} target="_blank">
             <img
               src={"brand_img/" + item.name + ".png"}
               width={100}
