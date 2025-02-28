@@ -52,7 +52,7 @@ const Brands = () => {
         >
           <Link to={item.url}>
             <img
-              src={"brands/" + item.name + ".png"}
+              src={"brand_img/" + item.name + ".png"}
               width={100}
               height={40}
               alt={item.name}
