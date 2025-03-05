@@ -7,10 +7,9 @@ function About() {
         <span>
           Welcome to DAD’s Discount Appliance Distributors, Inc. DBA DAD’s
           Appliance, your trusted source for high-quality home appliances at
-          unbeatable prices. With over 41 years of experience in the industry,
-          we have a proven track record of providing top-tier appliances to our
-          valued customers, all while helping you save on your hard-earned
-          dollars.
+          unbeatable prices. With over 41 years of industry experience, we have
+          a proven track record of providing top-tier appliances to our valued
+          customers, all while helping you save on your hard-earned dollars.
         </span>
       </p>
       <br />
@@ -20,7 +19,7 @@ function About() {
           Since our establishment in [1982], DAD’s Discount Appliance
           Distributors has been a cornerstone in the world of home appliances.
           Over four decades of unwavering commitment to quality, affordability,
-          and customer satisfaction have made us a household name in the
+          and customer satisfaction, we have become a household name in the
           industry.
         </span>
       </p>

@@ -4,7 +4,6 @@ const Brands = () => {
   const brand_names = [
     { name: "amana", url: "https://www.amana.com/" },
     { name: "asko", url: "https://global.asko.com/" },
-    { name: "bosch", url: "https://bosh.com/" },
     { name: "broan", url: "https://broan-nutone.com/en-us" },
     { name: "cafe", url: "https://www.cafeappliances.com/" },
     { name: "fisher_paykel", url: "https://www.fisherpaykel.com/us/" },
@@ -24,10 +23,7 @@ const Brands = () => {
     { name: "viking", url: "https://www.vikingrange.com/consumer/index.jsp" },
     { name: "zephyr", url: "https://zephyronline.com/" },
     { name: "cove", url: "https://www.subzero-wolf.com/en/cove/dishwashers" },
-    {
-      name: "gladiator",
-      url: "https://www.garage-organization.com/Category/Garage-Appliances.aspx",
-    },
+    { name: "purlick", url: "https://www.perlick.com/" },
     { name: "kitchen_aid", url: "https://www.kitchenaid.com/" },
     { name: "maytag", url: "https://www.maytag.com/" },
     { name: "miele", url: "https://www.mieleusa.com/" },
