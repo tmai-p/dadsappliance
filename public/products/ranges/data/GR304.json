@@ -1,33 +1,29 @@
 [
-    {
-        "brand": "Kitchen Aid",
-        "model": "GR340",
-        "price": "1234",
-        "msrp": "2222"
-    },
-    {
-        "images": ["ka-1.png", "ka-2.png", "ka-3.png"]
-    },
-    {
-        "feature": [
-            "Control temperature precisely with four dual-stacked, sealed gas burners for higher highs, lower lows", 
-            "Enjoy quicker heat and more even cooking with this large capacity gas convection oven",
-            "Produce crisper crusts and faster sears with the powerful infrared interior broiler",
-            "Re-ignites flame automatically with our spark ignition system for improved temperature control and added safety"
-        ],
-        "interior": [
-            "Two standard racks, one full-extension ball bearing rack in oven",
-            "30,000 Btu oven burner",
-            "18,000 Btu oven broiler"
-        ],
-        "specifications": [
-            "Overall Dimensions: 29 7/8\" W x 37\" H x 28 3/8\" D",
-            "Oven 1 Usable Capacity: 2.5 cubic feet",
-            "Oven 1 Overall Capacity: 4.4 cubic feet"
-        ],
-        "top": [
-            "1 - 9,200 Btu burner",
-            "3 - 15,000 Btu burners"
-        ]
-    }
+  {
+    "brand": "Kitchen Aid",
+    "model": "GR340",
+    "price": "1234",
+    "msrp": "2222",
+    "images": ["ka-1.png", "ka-2.png", "ka-3.png"],
+    "feature": [
+        "Control temperature precisely with four dual-stacked, sealed gas burners for higher highs, lower lows", 
+        "Enjoy quicker heat and more even cooking with this large capacity gas convection oven",
+        "Produce crisper crusts and faster sears with the powerful infrared interior broiler",
+        "Re-ignites flame automatically with our spark ignition system for improved temperature control and added safety"
+    ],
+    "interior": [
+        "Two standard racks, one full-extension ball bearing rack in oven",
+        "30,000 Btu oven burner",
+        "18,000 Btu oven broiler"
+    ],
+    "specifications": [
+        "Overall Dimensions: 29 7/8\" W x 37\" H x 28 3/8\" D",
+        "Oven 1 Usable Capacity: 2.5 cubic feet",
+        "Oven 1 Overall Capacity: 4.4 cubic feet"
+    ],
+    "top": [
+        "1 - 9,200 Btu burner",
+        "3 - 15,000 Btu burners"
+    ]
+  }
 ]

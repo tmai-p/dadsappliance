@@ -4,13 +4,22 @@ import { useParams } from "react-router-dom";
 
 function Item_details() {
   //Hook for state handler
-  const [items, setItems] = useState([]);
+  const [product, setProduct] = useState([
+    {
+      brand: "",
+      model: "",
+      price: "",
+      msrp: "",
+      images: [],
+      feature: [],
+      interior: [],
+      specifications: [],
+      top: [],
+    },
+  ]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-
   let params = useParams();
-
-  //console.log("param: " + params.model);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -23,12 +32,12 @@ function Item_details() {
           throw new Error(`HTTP error! status: ${response.status}`);
         }
         const json = await response.json();
-        console.log("item_data:", json);
-        setItems(json);
+        console.log("product_list:", json);
+        setProduct(json);
         setError(null);
       } catch (e: any) {
         setError(e);
-        setItems([]);
+        setProduct([]);
       } finally {
         setLoading(false);
       }
@@ -62,22 +71,24 @@ function Item_details() {
             padding: 20,
           }}
         >
-          <Carousel fade>
-            {items[1].images.map((img) => (
-              <Carousel.Item>
-                <img
-                  src={"products/ranges/img/" + img}
-                  width={300}
-                  height={250}
-                  alt={"Kitchen Aid"}
-                />
-                <Carousel.Caption>
-                  {/* <h6>First slide label</h6> */}
-                  <p>description</p>
-                </Carousel.Caption>
-              </Carousel.Item>
-            ))}
-          </Carousel>
+          {product.map((p: any) => (
+            <Carousel fade>
+              {p.images.map((img: any) => (
+                <Carousel.Item>
+                  <img
+                    src={"products/ranges/img/" + img}
+                    width={300}
+                    height={250}
+                    alt={"Kitchen Aid"}
+                  />
+                  <Carousel.Caption>
+                    {/* <h6>First slide label</h6> */}
+                    <p>description</p>
+                  </Carousel.Caption>
+                </Carousel.Item>
+              ))}
+            </Carousel>
+          ))}
         </div>
 
         <div
@@ -87,52 +98,56 @@ function Item_details() {
             padding: 20,
           }}
         >
-          <p>
-            <h4>{items[0].brand}</h4>
-            <br />
-            <p>Model: {items[0].model}</p>
-            <p>MSRP: {formatter.format(items[0].msrp)}</p>
-            <p>Our Price: {formatter.format(items[0].price)}</p>
-            <br />
-          </p>
+          {product.map((p: any) => (
+            <p>
+              <h4>{p.brand}</h4>
+              <br />
+              <p>Model: {p.model}</p>
+              <p>MSRP: {formatter.format(p.msrp)}</p>
+              <p>Our Price: {formatter.format(p.price)}</p>
+              <br />
+            </p>
+          ))}
         </div>
       </div>
 
       <div style={{ display: "block", width: 1000, padding: 10 }}>
-        <Tabs defaultActiveKey="first">
-          <Tab eventKey="first" title="Feature">
-            <br />
-            <ul>
-              {items[2].feature.map((item) => (
-                <li>{item}</li>
-              ))}
-            </ul>
-          </Tab>
-          <Tab eventKey="second" title="Oven Interior">
-            <br />
-            <ul>
-              {items[2].interior.map((item) => (
-                <li>{item}</li>
-              ))}
-            </ul>
-          </Tab>
-          <Tab eventKey="third" title="Specifications">
-            <br />
-            <ul>
-              {items[2].specifications.map((item) => (
-                <li>{item}</li>
-              ))}
-            </ul>
-          </Tab>
-          <Tab eventKey="four" title="Top">
-            <br />
-            <ul>
-              {items[2].top.map((item) => (
-                <li>{item}</li>
-              ))}
-            </ul>
-          </Tab>
-        </Tabs>
+        {product.map((p) => (
+          <Tabs defaultActiveKey="first">
+            <Tab eventKey="first" title="Feature">
+              <br />
+              <ul>
+                {p.feature.map((item: string) => (
+                  <li>{item}</li>
+                ))}
+              </ul>
+            </Tab>
+            <Tab eventKey="second" title="Oven Interior">
+              <br />
+              <ul>
+                {p.interior.map((item: string) => (
+                  <li>{item}</li>
+                ))}
+              </ul>
+            </Tab>
+            <Tab eventKey="third" title="Specifications">
+              <br />
+              <ul>
+                {p.specifications.map((item: string) => (
+                  <li>{item}</li>
+                ))}
+              </ul>
+            </Tab>
+            <Tab eventKey="four" title="Top">
+              <br />
+              <ul>
+                {p.top.map((item: string) => (
+                  <li>{item}</li>
+                ))}
+              </ul>
+            </Tab>
+          </Tabs>
+        ))}
       </div>
     </div>
   );
