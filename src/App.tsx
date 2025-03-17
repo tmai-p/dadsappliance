@@ -9,6 +9,7 @@ import TopNavbar from "./components/TopNavbar";
 import Footer from "./components/Footer";
 import Ranges from "./pages/Ranges";
 import Fridges from "./pages/Fridges";
+import Item_details from "./pages/Item_details";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
         <Route path="/confirm" element={<Confirm />} />
         <Route path="/ranges" element={<Ranges />} />
         <Route path="/fridges" element={<Fridges />} />
+        <Route path="/item_details/:model" element={<Item_details />} />
       </Routes>
       <Footer />
     </Router>
