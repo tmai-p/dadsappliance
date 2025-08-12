@@ -37,17 +37,20 @@ function TopNavbar() {
               </Nav.Link>
               <NavDropdown title="Specials" id="basic-nav-dropdown">
                 <NavDropdown.Item as={Link} to={"fridges"}>
-                  Refrigerator
+                  Refrigeration
                 </NavDropdown.Item>
-                <NavDropdown.Item as={Link} to={"ranges"}>
-                  Ranges
+                <NavDropdown.Item as={Link} to={"cooktops"}>
+                  Cooktops
                 </NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.3">
-                  Something Else
+                <NavDropdown.Item as={Link} to={"hood"}>
+                  Hood
+                </NavDropdown.Item>
+                <NavDropdown.Item as={Link} to={"laundry"}>
+                  Laundry
                 </NavDropdown.Item>
                 <NavDropdown.Divider />
-                <NavDropdown.Item href="#action/3.4">
-                  Separated link
+                <NavDropdown.Item as={Link} to={"accessories"}>
+                  Accessories
                 </NavDropdown.Item>
               </NavDropdown>
             </Nav>

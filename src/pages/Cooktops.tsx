@@ -3,17 +3,17 @@ import { Link } from "react-router-dom";
 import { Row, Col, Image } from "react-bootstrap";
 import Card from "react-bootstrap/Card";
 
-function Fridges() {
+function Cooktops() {
   //Hook for state handler
   const [items, setItems] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-  
+
   useEffect(() => {
     const fetchData = async () => {
       setLoading(true);
       try {
-        const response = await fetch("./products/fridges/data/item_list.json");
+        const response = await fetch("./products/cooktops/data/item_list.json");
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`);
         }
@@ -35,7 +35,7 @@ function Fridges() {
   if (loading) {
     return <p>Loading data...</p>;
   }
-  
+
   if (error) {
     return <p>Error: {error}</p>;
   }
@@ -52,12 +52,12 @@ function Fridges() {
           overflowWrap: "break-word",
         }}
       >
-        <h3 className="mb-4">Refrigeration</h3>
+        <h3 className="mb-4">Cooktops</h3>
         <Row>
           {items.map((image, index) => (
             /*<Col key={index} xs={12} sm={6} md={4} lg={3}>*/
             <Col key={index} md={3} sm={6} className="text-center">
-              <Link to={`/fridge_details/${image.model}`}>
+              <Link to={`/cooktop_details/${image.model}`}>
                 <p>
                   <Image
                     src={image.image_loc + image.name + ".jpg"}
@@ -79,9 +79,10 @@ function Fridges() {
             </Col>
           ))}
         </Row>
+
       </div>
     </div>
   );
 }
 
-export default Fridges;
+export default Cooktops;

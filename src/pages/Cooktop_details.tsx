@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { Tabs, Tab, Carousel } from "react-bootstrap";
 import { useParams } from "react-router-dom";
 
-function Item_details() {
+function Cooktop_details() {
   //Hook for state handler
   const [product, setProduct] = useState([
     {
@@ -26,7 +26,7 @@ function Item_details() {
       setLoading(true);
       try {
         const response = await fetch(
-          "./products/ranges/data/" + params.model + ".json"
+          "./products/cooktops/data/" + params.model + ".json"
         );
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`);
@@ -54,6 +54,7 @@ function Item_details() {
     return <p>Error: {error}</p>;
   }
 
+  //Currency formatter
   const formatter = new Intl.NumberFormat("en-US", {
     style: "currency",
     currency: "USD",
@@ -76,14 +77,14 @@ function Item_details() {
               {p.images.map((img: any) => (
                 <Carousel.Item>
                   <img
-                    src={"products/ranges/img/" + img}
+                    src={"products/cooktops/img/" + img}
                     width={300}
                     height={250}
                     alt={"Kitchen Aid"}
                   />
                   <Carousel.Caption>
                     {/* <h6>First slide label</h6> */}
-                    <p>description</p>
+                    <p></p>
                   </Carousel.Caption>
                 </Carousel.Item>
               ))}
@@ -104,7 +105,7 @@ function Item_details() {
               <br />
               <p>Model: {p.model}</p>
               <p>MSRP: {formatter.format(p.msrp)}</p>
-              <p>Our Price: {formatter.format(p.price)}</p>
+              <p>Our Price: {p.price}</p>
               <br />
             </p>
           ))}
@@ -153,4 +154,4 @@ function Item_details() {
   );
 }
 
-export default Item_details;
+export default Cooktop_details;

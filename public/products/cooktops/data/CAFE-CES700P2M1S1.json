@@ -1,0 +1,29 @@
+[
+  {
+    "brand": "CAFE",
+    "model": "CES700P2M1S1",
+    "price": "Please call for price",
+    "msrp": "2999",
+    "images": ["CAFE-CES700P2M1S1-1.jpg", "CAFE-CES700P2M1S1-2.jpg", "CAFE-CES700P2M1S1-3.jpg", "CAFE-CES700P2M1S1-4.jpg"],
+    "feature": [
+        "Seamless glass surface streamlines and simplifies cooking - a sleek look is yours with an edge-to-edge glass cooktop that provides a seamless, easy-to-clean surface with more usable cooking space for five course meals", 
+        "Range with Warming Drawer",
+        "Front controls",
+        "Built-In WiFi, Powered by SmartHQ App"
+    ],
+    "interior": [
+        "Standard (incandescent) oven light",
+        "Depth Without Handle: 26 7/8 in",
+        "Depth with Door Open: 47 1/2 in"
+    ],
+    "specifications": [
+        "Oven Interior Dimensions (W x H x D): 24 x 19-7/8 x 20-5/8",
+        "Depth with Door Open: 47 1/2 in",
+        "Height to Cooking Surface: 36 1/4 +/- 1/4 in"
+    ],
+    "top": [
+        "Cooktop Burner Type: Radiant Smoothtop",
+        "Cooktop Surface: Black Patterned Ceramic Glass"
+    ]
+  }
+]

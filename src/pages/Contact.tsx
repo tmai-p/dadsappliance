@@ -1,14 +1,20 @@
 import { useState } from "react";
-import Button from "react-bootstrap/Button";
-import Form from "react-bootstrap/Form";
+import { Form, Button, Col, Alert } from 'react-bootstrap';
+//import Button from "react-bootstrap/Button";
+//import Form from "react-bootstrap/Form";
 import emailjs from "@emailjs/browser";
 import { useNavigate } from "react-router-dom";
-import Col from "react-bootstrap/Col";
+//import Col from "react-bootstrap/Col";
+import ReCAPTCHA from 'react-google-recaptcha';
+import appConfig from '../../config.json';
 
 function Contact() {
   const navigate = useNavigate();
   const [validated, setValidated] = useState(false);
   const [phoneNumber, setPhoneNumber] = useState("");
+  const [submitted, setSubmitted] = useState(false);
+  const [captchaValue, setCaptchaValue] = useState<string | null>(null);
+  const siteKey = appConfig.siteKey; // Use the site key from config
 
   const [formData, setFormData] = useState({
     name: "",
@@ -29,13 +35,11 @@ function Contact() {
   const handleSubmit = (e: any) => {
     const form = e.currentTarget;
 
-    if (form.checkValidity() === false) {
-      e.preventDefault();
-      e.stopPropagation();
-    } else if (!validatePhoneNumber(phoneNumber)) {
-      e.preventDefault();
+    if (form.checkValidity() === false || !captchaValue || !validatePhoneNumber(phoneNumber)) {
       e.stopPropagation();
     } else {
+      setSubmitted(true);
+      // Send email using EmailJS
       emailjs
         .sendForm(
           "service_b0sj01i",
@@ -92,8 +96,8 @@ function Contact() {
       <div className="row justify-content-center p-3">
         <div className="col-lg">
           <Form noValidate validated={validated} onSubmit={handleSubmit}>
-            <Form.Group as={Col} md="7" controlId="validationCustom01">
-              <Form.Label>Enter your first and last name:</Form.Label>
+            <Form.Group as={Col} md="7" controlId="formName">
+              <Form.Label>Full name:</Form.Label>
               <Form.Control
                 required
                 id="name"
@@ -109,7 +113,7 @@ function Contact() {
             </Form.Group>
 
             <br />
-            <Form.Group as={Col} md="7" controlId="validationCustom01">
+            <Form.Group as={Col} md="7" controlId="formEmail">
               <Form.Label>Enter your email address:</Form.Label>
               <Form.Control
                 required
@@ -125,7 +129,7 @@ function Contact() {
               </Form.Control.Feedback>
             </Form.Group>
             <br />
-            <Form.Group as={Col} md="7" controlId="validationCustom01">
+            <Form.Group as={Col} md="7" controlId="formPhoneNumber">
               <Form.Label>Enter your phone number:</Form.Label>
               <Form.Control
                 id="phone"
@@ -141,7 +145,7 @@ function Contact() {
               </Form.Control.Feedback>
             </Form.Group>
             <br />
-            <Form.Group controlId="validationCustom01">
+            <Form.Group controlId="formMessage">
               <Form.Label>Enter your message:</Form.Label>
               <Form.Control
                 required
@@ -158,10 +162,21 @@ function Contact() {
               </Form.Control.Feedback>
             </Form.Group>
             <br />
+            <ReCAPTCHA
+              sitekey={siteKey}
+              onChange={value => setCaptchaValue(value)}
+              className="mb-3"
+            />
+            <br />
             <Button variant="primary" type="submit">
               SEND MESSAGE
             </Button>
           </Form>
+          {submitted && (
+            <Alert variant="success" className="mt-3">
+              Form submitted successfully!
+            </Alert>
+          )}
         </div>
         <div className="col-auto">
           <h6>OFFICE</h6>
