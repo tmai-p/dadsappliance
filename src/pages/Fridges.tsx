@@ -2,10 +2,11 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { Row, Col, Image } from "react-bootstrap";
 import Card from "react-bootstrap/Card";
+import { CooktopItem } from "../interf/CooktopItem";
 
 function Fridges() {
   //Hook for state handler
-  const [items, setItems] = useState([]);
+  const [items, setItems] = useState<CooktopItem[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   
