@@ -1,0 +1,26 @@
+[
+  {
+    "brand": "U-LINE",
+    "description": "HBV524 24\" Beverage Center",
+    "model": "U-LINE-UHBV524-SG01A",
+    "price": "Please call for price",
+    "msrp": "4809",
+    "images": ["U-LINE-UHBV524-SG01A-1.jpg", "U-LINE-UHBV524-SG01A-2.jpg"],
+    "feature": [
+        "Industry Leading: Variable speed compressor delivers maximum energy efficiency, faster temperature response, and quieter operation", 
+        "Convection cooling system provides a quick cool down and consistent temperature",
+        "Stainless steel interior",
+        "Stainless steel cabinet, grille, and accents"
+    ],
+    "interior": [
+        "Capacity: Total Volume (cu ft) 5.2 cu ft",
+        "Capacity: Wine Bottle (750 ml) 14",
+        "Capacity Can 111"
+    ],
+    "specifications": [
+        "Depth 23 7/16\" (595mm)",
+        "Height 33 11/16\" (856mm)",
+        "Width 23 5/8\" (600mm)"
+    ]
+  }
+]
