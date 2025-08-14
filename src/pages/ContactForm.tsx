@@ -88,7 +88,7 @@ const ContactForm = () => {
                 <br />
                 <p>6636 Virginia Manor Road, Beltsville, MD 20705</p>
                 <p>📞 301-937-0222</p>
-                <p>📨 email@address.com</p>
+                <p>📨 bid@dadsappliance.com</p>
             </div>
         </Col>
       </Row>

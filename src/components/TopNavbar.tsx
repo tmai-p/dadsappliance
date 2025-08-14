@@ -1,6 +1,6 @@
 import { Nav, Navbar, Container, NavDropdown } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import dads_logo from "../images/dads_logo.jpg";
+import dads_logo from "../images/dads_logo.png";
 
 function TopNavbar() {
   const isHidden = true;
