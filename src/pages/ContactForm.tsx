@@ -23,7 +23,7 @@ const ContactForm = () => {
         setSubmitted(true);
         // Send email using EmailJS
         emailjs.sendForm(
-            "service_b0sj01i",
+            "service_3j5o6pi",
             "template_1iwtlnn",
             event.target,
             "s2N5-LuHgafrpkiYE"
